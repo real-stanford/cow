@@ -68,7 +68,7 @@ tar -xvf datasets.tar.gz
 ```
 This should create a folder called `datasets/`
 
-Additionally THOR rendering requires that `Xorg` processes are running on all GPUs. If processes are not already running, run the following:
+Additionally, THOR rendering requires that `Xorg` processes are running on all GPUs. If processes are not already running, run the following:
 ```
 sudo python scripts/startx.py
 ```
@@ -83,7 +83,7 @@ For Pasture and RoboTHOR, to evaluate the OWL-ViT B-32 default cow, run:
 python pasture_runner.py -a src.models.agent_fbe_owl -n 8 --arch B32 --center
 ```
 
-Note: this automatically evaluates all Pasture splits and RoboTHOR.
+Note: this automatically evaluates all Pasture splits and RoboTHOR. If the script is stopped, it will resume where it left off. If you want to re-evaluate from scratch, remove the results subfolder associated with the agent being evaluated in `results/`.
 
 # Habitat MP3D Benchmark Setup
 
@@ -127,6 +127,8 @@ ln -s datasets/habitat data
 python habitat_mp3d_runner.py -a src.models.agent_fbe_owl -n 8 --arch B32 --center
 ```
 
+If the script is stopped, it will resume where it left off. If you want to re-evaluate from scratch, remove the results subfolder associated with the agent being evaluated in `results/`.
+
 # Helpful Pointers
 
 Evaluation is often long running. Each time an evaluation episode completes, a `json` with information about the trajectory is stored in the `results/` folder. For example, for the default agent on the Pasture uncommon object split: `results/longtail_longtail_fbe_owl-b32-openai-center/*.json`. This allows for printing the completed evaluations, e.g.,
@@ -143,7 +145,7 @@ python success_agg.py --result-dir results/habitat_regular_fbe_owl-b32-openai-ce
 
 # Codebase Overview
 
-We hope that our coupling with [AllenAct](https://allenact.org/) will provide flexibility, while the setup in this repo will make it easy to run experiments on Pasture, RoboTHOR, Habitat, etc. in a relatively painless way. We hope this will encourage evaluating single agents on multiple benchmarks!
+We hope this repo will make it easy to run experiments on Pasture, RoboTHOR, Habitat, etc. in a relatively painless way. We hope this will encourage people to create new cows and to evaluate single agents on multiple benchmarks!
 
 At a high level, `pasture_runner.py` supports Pasture and RoboTHOR evaluation and `habitat_mp3d_runner.py` supports evaluation on Habitat.
 
