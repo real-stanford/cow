@@ -1,0 +1,1833 @@
+{
+    "FloorPlan_Val1_1": {
+        "AlarmClock": [
+            "alarm clock on a dresser near a desk lamp, bed",
+            "small, metallic alarm clock",
+            [
+                "alarm clock on a dresser",
+                "alarm clock near a desk lamp",
+                "alarm clock near a bed"
+            ]
+        ],
+        "Apple": [
+            "apple on a desk near a laptop, painting, watch, bottle, chair",
+            "small, red apple",
+            [
+                "apple on a desk",
+                "apple near a laptop",
+                "apple near a painting",
+                "apple near a watch",
+                "apple near a bottle",
+                "apple near a chair"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a basketball, arm chair",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a basketball",
+                "baseball bat near an arm chair"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near a baseball bat, bowl, coffee table, arm chair",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near a baseball bat",
+                "basketball near a bowl",
+                "basketball near a coffee table",
+                "basketball near an arm chair"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a coffee table near a newspaper, pen, basketball, statue",
+            "small, white, ceramic bowl",
+            [
+                "bowl on a coffee table",
+                "bowl near a newspaper",
+                "bowl near a pen",
+                "bowl near a basketball",
+                "bowl near a statue"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a floor lamp",
+            "black, plastic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a floor lamp"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a dresser near a spray bottle",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a dresser",
+                "plant near a spray bottle"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a desk near an apple, mug, watch, bottle, chair",
+            "grey, plastic laptop",
+            [
+                "laptop on a desk",
+                "laptop near an apple",
+                "laptop near a mug",
+                "laptop near a watch",
+                "laptop near a bottle",
+                "laptop near a chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a desk near a laptop, bottle, chair",
+            "small, white, ceramic mug",
+            [
+                "mug on a desk",
+                "mug near a laptop",
+                "mug near a bottle",
+                "mug near a chair"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a dresser near a house plant",
+            "small, pink, plastic spray bottle",
+            [
+                "spray bottle on a dresser",
+                "spray bottle near a house plant"
+            ]
+        ],
+        "Television": [
+            "TV on a dresser near a remote control",
+            "black and grey TV with a stand",
+            [
+                "TV on a dresser",
+                "TV near a remote control"
+            ]
+        ],
+        "Vase": [
+            "vase on a desk near a plate, fork, book",
+            "tall, blue, ceramic vase",
+            [
+                "vase on a desk",
+                "vase near a plate",
+                "vase near a fork",
+                "vase near a book"
+            ]
+        ]
+    },
+    "FloorPlan_Val1_2": {
+        "AlarmClock": [
+            "alarm clock on a side table near a newspaper",
+            "small, brown alarm clock",
+            [
+                "alarm clock on a side table",
+                "alarm clock near a newspaper"
+            ]
+        ],
+        "Apple": [
+            "apple on a side table near a cup, desk lamp",
+            "small, green apple",
+            [
+                "apple on a side table",
+                "apple near a cup",
+                "apple near a desk lamp"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a remote control, TV, coffee table",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a remote control",
+                "baseball bat near a TV",
+                "baseball bat near a coffee table"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near a salt shaker, cd, coffee table, book, pepper shaker",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near a salt shaker",
+                "basketball near a cd",
+                "basketball near a coffee table",
+                "basketball near a book",
+                "basketball near a pepper shaker"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a coffee table near a laptop, chair, shelf, bottle",
+            "small, clear, glass bowl",
+            [
+                "bowl on a coffee table",
+                "bowl near a laptop",
+                "bowl near a chair",
+                "bowl near a shelf",
+                "bowl near a bottle"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a TV, coffee table",
+            "white, plastic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a TV",
+                "garbage can near a coffee table"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a coffee table near a coffee table, baseball bat, spray bottle, shelf",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a coffee table",
+                "plant near a coffee table",
+                "plant near a baseball bat",
+                "plant near a spray bottle",
+                "plant near a shelf"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a coffee table near a chair, bowl",
+            "black, plastic laptop",
+            [
+                "laptop on a coffee table",
+                "laptop near a chair",
+                "laptop near a bowl"
+            ]
+        ],
+        "Mug": [
+            "mug on a dresser near a dresser, candle, statue",
+            "small, sand-colored, ceramic mug",
+            [
+                "mug on a dresser",
+                "mug near a dresser",
+                "mug near a candle",
+                "mug near a statue"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a coffee table near a house plant",
+            "small, green, plastic spray bottle",
+            [
+                "spray bottle on a coffee table",
+                "spray bottle near a house plant"
+            ]
+        ],
+        "Television": [
+            "TV on a coffee table near a remote control, baseball bat, garbage can",
+            "black and grey TV with a stand",
+            [
+                "TV on a coffee table",
+                "TV near a remote control",
+                "TV near a baseball bat",
+                "TV near a garbage can"
+            ]
+        ],
+        "Vase": [
+            "vase on a side table near a floor lamp, newspaper",
+            "tall, yellow, ceramic vase",
+            [
+                "vase on a side table",
+                "vase near a floor lamp",
+                "vase near a newspaper"
+            ]
+        ]
+    },
+    "FloorPlan_Val1_3": {
+        "AlarmClock": [
+            "alarm clock on a side table near a desk lamp, books, bed",
+            "small, brown alarm clock",
+            [
+                "alarm clock on a side table",
+                "alarm clock near a desk lamp",
+                "alarm clock near a books",
+                "alarm clock near a bed"
+            ]
+        ],
+        "Apple": [
+            "apple on a plate on a dining table near a pen, spray bottle, house plant, mug, plate, bottle",
+            "small, red apple",
+            [
+                "apple on a plate on a dining table",
+                "apple near a pen",
+                "apple near a spray bottle",
+                "apple near a house plant",
+                "apple near a mug",
+                "apple near a plate",
+                "apple near a bottle"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a dresser, statue, floor lamp",
+            "silver, metallic baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a dresser",
+                "baseball bat near a statue",
+                "baseball bat near a floor lamp"
+            ]
+        ],
+        "BasketBall": [
+            "basketball in a box on the floor near a sidetable",
+            "orange basketball",
+            [
+                "basketball in a box on the floor",
+                "basketball near a sidetable"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a coffee table near a pencil, remote control, pot, statue",
+            "small, bluish-grey, plastic bowl",
+            [
+                "bowl on a coffee table",
+                "bowl near a pencil",
+                "bowl near a remote control",
+                "bowl near a pot",
+                "bowl near a statue"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a bed, painting",
+            "green, plastic recycling bin",
+            [
+                "garbage can on the floor",
+                "garbage can near a bed",
+                "garbage can near a painting"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a dining table near a plate, apple, spray bottle, mug, painting",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a dining table",
+                "plant near a plate",
+                "plant near an apple",
+                "plant near a spray bottle",
+                "plant near a mug",
+                "plant near a painting"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a side table near a vase, cup, chair",
+            "black, metallic laptop",
+            [
+                "laptop on a side table",
+                "laptop near a vase",
+                "laptop near a cup",
+                "laptop near a chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a dining table near a pen, apple, spray bottle, house plant, plate, bottle",
+            "small, black, ceramic mug",
+            [
+                "mug on a dining table",
+                "mug near a pen",
+                "mug near an apple",
+                "mug near a spray bottle",
+                "mug near a house plant",
+                "mug near a plate",
+                "mug near a bottle"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a dining table near a mug, plate, apple, house plant",
+            "small, white, plastic spray bottle",
+            [
+                "spray bottle on a dining table",
+                "spray bottle near a mug",
+                "spray bottle near a plate",
+                "spray bottle near an apple",
+                "spray bottle near a house plant"
+            ]
+        ],
+        "Television": [
+            "TV on the wall near a side table",
+            "black and grey, mounted TV",
+            [
+                "TV on the wall",
+                "TV near a side table"
+            ]
+        ],
+        "Vase": [
+            "vase on a side table near a cup, laptop, chair",
+            "tall, golden, metallic vase",
+            [
+                "vase on a side table",
+                "vase near a cup",
+                "vase near a laptop",
+                "vase near a chair"
+            ]
+        ]
+    },
+    "FloorPlan_Val1_4": {
+        "AlarmClock": [
+            "alarm clock on a dresser near a desk lamp, painting",
+            "small, gold and rust-colored alarm clock",
+            [
+                "alarm clock on a dresser",
+                "alarm clock near a desk lamp",
+                "alarm clock near a painting"
+            ]
+        ],
+        "Apple": [
+            "apple on a desk near a bowl, chair",
+            "small, red apple",
+            [
+                "apple on a desk",
+                "apple near a bowl",
+                "apple near a chair"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a mug, desk",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a mug",
+                "baseball bat near a desk"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near a desk",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near a desk"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a desk near an apple, mug, chair",
+            "small, light-brown, plastic bowl",
+            [
+                "bowl on a desk",
+                "bowl near an apple",
+                "bowl near a mug",
+                "bowl near a chair"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a shelf, chair",
+            "black, metallic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a shelf",
+                "garbage can near a chair"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a dining table near a butter knife, plate, statue, fork",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a dining table",
+                "plant near a butter knife",
+                "plant near a plate",
+                "plant near a statue",
+                "plant near a fork"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a dining table near a bottle, book, chair",
+            "silver, metallic laptop",
+            [
+                "laptop on a dining table",
+                "laptop near a bottle",
+                "laptop near a book",
+                "laptop near a chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a desk near a baseball bat, bowl, chair",
+            "small, white, ceramic mug",
+            [
+                "mug on a desk",
+                "mug near a baseball bat",
+                "mug near a bowl",
+                "mug near a chair"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a dining table near a vase, plate, butter knife, statue, chair",
+            "small, yellow, plastic spray bottle",
+            [
+                "spray bottle on a dining table",
+                "spray bottle near a vase",
+                "spray bottle near a plate",
+                "spray bottle near a butter knife",
+                "spray bottle near a statue",
+                "spray bottle near a chair"
+            ]
+        ],
+        "Television": [
+            "TV on a side table",
+            "black and grey TV with a stand",
+            [
+                "TV on a side table"
+            ]
+        ],
+        "Vase": [
+            "vase on a dining table near a butter knife, spray bottle, statue, chair",
+            "small, white, ceramic vase",
+            [
+                "vase on a dining table",
+                "vase near a butter knife",
+                "vase near a spray bottle",
+                "vase near a statue",
+                "vase near a chair"
+            ]
+        ]
+    },
+    "FloorPlan_Val1_5": {
+        "AlarmClock": [
+            "alarm clock on a coffee table near a laptop, spray bottle",
+            "small, metallic, silver and black alarm clock",
+            [
+                "alarm clock on a coffee table",
+                "alarm clock near a laptop",
+                "alarm clock near a spray bottle"
+            ]
+        ],
+        "Apple": [
+            "apple on a dining table near a butter knife, bowl, fork, mug, plate, chair",
+            "small, red apple",
+            [
+                "apple on a dining table",
+                "apple near a butter knife",
+                "apple near a bowl",
+                "apple near a fork",
+                "apple near a mug",
+                "apple near a plate",
+                "apple near a chair"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a remote control, side table",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a remote control",
+                "baseball bat near a side table"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near a coffee table, desk lamp, cell phone, newspaper, bed",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near a coffee table",
+                "basketball near a desk lamp",
+                "basketball near a cell phone",
+                "basketball near a newspaper",
+                "basketball near a bed"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a dining table near a butter knife, fork, apple, mug, plate, chair",
+            "small, clear, glass bowl",
+            [
+                "bowl on a dining table",
+                "bowl near a butter knife",
+                "bowl near a fork",
+                "bowl near an apple",
+                "bowl near a mug",
+                "bowl near a plate",
+                "bowl near a chair"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a chair",
+            "blue, plastic recycling bin",
+            [
+                "garbage can on the floor",
+                "garbage can near a chair"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a coffee table near a cup, candle, statue, sofa",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a coffee table",
+                "plant near a cup",
+                "plant near a candle",
+                "plant near a statue",
+                "plant near a sofa"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a coffee table near a coffee table, chair, alarm clock",
+            "black, metallic laptop",
+            [
+                "laptop on a coffee table",
+                "laptop near a coffee table",
+                "laptop near a chair",
+                "laptop near an alarm clock"
+            ]
+        ],
+        "Mug": [
+            "mug on a dining table near a butter knife, bowl, fork, apple, plate",
+            "small, sand-colored, ceramic mug",
+            [
+                "mug on a dining table",
+                "mug near a butter knife",
+                "mug near a bowl",
+                "mug near a fork",
+                "mug near an apple",
+                "mug near a plate"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on the floor near a coffee table, alarm clock",
+            "small, blue, plastic spray bottle",
+            [
+                "spray bottle on the floor",
+                "spray bottle near a coffee table",
+                "spray bottle near an alarm clock"
+            ]
+        ],
+        "Television": [
+            "TV on a coffee table near a remote control",
+            "black and grey TV with a stand",
+            [
+                "TV on a coffee table",
+                "TV near a remote control"
+            ]
+        ],
+        "Vase": [
+            "vase on a coffee table near a candle, statue",
+            "small, white, ceramic vase",
+            [
+                "vase on a coffee table",
+                "vase near a candle",
+                "vase near a statue"
+            ]
+        ]
+    },
+    "FloorPlan_Val2_1": {
+        "AlarmClock": [
+            "alarm clock on a side table near a remote control, arm chair",
+            "small, metallic, silver and black alarm clock",
+            [
+                "alarm clock on a side table",
+                "alarm clock near a remote control",
+                "alarm clock near an arm chair"
+            ]
+        ],
+        "Apple": [
+            "apple on a plate on a coffee table near a vase, baseball bat, plate, cell phone",
+            "small, red apple",
+            [
+                "apple on a plate on a coffee table",
+                "apple near a vase",
+                "apple near a baseball bat",
+                "apple near a plate",
+                "apple near a cell phone"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a vase, box, apple, plate, cell phone, box, coffee table",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a vase",
+                "baseball bat near a box",
+                "baseball bat near an apple",
+                "baseball bat near a plate",
+                "baseball bat near a cell phone",
+                "baseball bat near a box",
+                "baseball bat near a coffee table"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on a sofa",
+            "orange basketball",
+            [
+                "basketball on a sofa"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a dining table near a spray bottle, house plant, bottle",
+            "small, greenish-grey, plastic bowl",
+            [
+                "bowl on a dining table",
+                "bowl near a spray bottle",
+                "bowl near a house plant",
+                "bowl near a bottle"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a dining table",
+            "white, plastic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a dining table"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a dining table near a bowl, spray bottle, bottle",
+            "green, potted snake plant",
+            [
+                "house plant on a dining table",
+                "plant near a bowl",
+                "plant near a spray bottle",
+                "plant near a bottle"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a dining table near a mug, desk lamp, watch, chair",
+            "grey, plastic laptop",
+            [
+                "laptop on a dining table",
+                "laptop near a mug",
+                "laptop near a desk lamp",
+                "laptop near a watch",
+                "laptop near a chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a dining table near a laptop, watch",
+            "small, black, ceramic mug",
+            [
+                "mug on a dining table",
+                "mug near a laptop",
+                "mug near a watch"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a dining table near a bowl, house plant, bottle",
+            "small, green, plastic spray bottle",
+            [
+                "spray bottle on a dining table",
+                "spray bottle near a bowl",
+                "spray bottle near a house plant",
+                "spray bottle near a bottle"
+            ]
+        ],
+        "Television": [
+            "TV on a coffee table",
+            "white TV with a stand",
+            [
+                "TV on a coffee table"
+            ]
+        ],
+        "Vase": [
+            "vase on a coffee table near a coffee table, box, apple, baseball bat, plate, cell phone",
+            "small, red, ceramic vase",
+            [
+                "vase on a coffee table",
+                "vase near a coffee table",
+                "vase near a box",
+                "vase near an apple",
+                "vase near a baseball bat",
+                "vase near a plate",
+                "vase near a cell phone"
+            ]
+        ]
+    },
+    "FloorPlan_Val2_2": {
+        "AlarmClock": [
+            "alarm clock on a shelving unit",
+            "small, metallic, copper and white alarm clock",
+            [
+                "alarm clock on a shelving unit"
+            ]
+        ],
+        "Apple": [
+            "apple on a desk near a cup, vase, drawer, remote control, mug, statue, chair",
+            "small, green apple",
+            [
+                "apple on a desk",
+                "apple near a cup",
+                "apple near a vase",
+                "apple near a drawer",
+                "apple near a remote control",
+                "apple near a mug",
+                "apple near a statue",
+                "apple near a chair"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a shelving unit",
+            "silver, metallic baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a shelving unit"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on a bed near a laptop",
+            "orange basketball",
+            [
+                "basketball on a bed",
+                "basketball near a laptop"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a side table near a box, teddy bear",
+            "small, clear, glass bowl",
+            [
+                "bowl on a side table",
+                "bowl near a box",
+                "bowl near a teddy bear"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a desk, painting",
+            "green, plastic recycling bin",
+            [
+                "garbage can on the floor",
+                "garbage can near a desk",
+                "garbage can near a painting"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a side table near a desk lamp, side table, chair",
+            "green, potted snake plant",
+            [
+                "house plant on a side table",
+                "plant near a desk lamp",
+                "plant near a side table",
+                "plant near a chair"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a bed near a drawer, basketball",
+            "grey, plastic laptop",
+            [
+                "laptop on a bed",
+                "laptop near a drawer",
+                "laptop near a basketball"
+            ]
+        ],
+        "Mug": [
+            "mug on a desk near a cup, apple, remote control, statue, chair",
+            "small, white, ceramic mug",
+            [
+                "mug on a desk",
+                "mug near a cup",
+                "mug near an apple",
+                "mug near a remote control",
+                "mug near a statue",
+                "mug near a chair"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on the floor near a side table, TV",
+            "small, black, plastic spray bottle",
+            [
+                "spray bottle on the floor",
+                "spray bottle near a side table",
+                "spray bottle near a TV"
+            ]
+        ],
+        "Television": [
+            "TV on a side table near a spray bottle",
+            "black and grey TV with a stand",
+            [
+                "TV on a side table",
+                "TV near a spray bottle"
+            ]
+        ],
+        "Vase": [
+            "vase in a shelving unit near an apple, desk",
+            "small, blue, ceramic vase",
+            [
+                "vase in a shelving unit",
+                "vase near an apple",
+                "vase near a desk"
+            ]
+        ]
+    },
+    "FloorPlan_Val2_3": {
+        "AlarmClock": [
+            "alarm clock on a dresser near a desk lamp, baseball bat",
+            "small, rust-colored and black alarm clock",
+            [
+                "alarm clock on a dresser",
+                "alarm clock near a desk lamp",
+                "alarm clock near a baseball bat"
+            ]
+        ],
+        "Apple": [
+            "apple on a desk near a laptop, bottle, chair",
+            "small, green apple",
+            [
+                "apple on a desk",
+                "apple near a laptop",
+                "apple near a bottle",
+                "apple near a chair"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a desk lamp, dresser, alarm clock",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a desk lamp",
+                "baseball bat near a dresser",
+                "baseball bat near an alarm clock"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near a chair",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near a chair"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a desk near a shelf, book",
+            "small, clear, glass bowl",
+            [
+                "bowl on a desk",
+                "bowl near a shelf",
+                "bowl near a book"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a desk",
+            "black, metallic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a desk"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a desk near a vase, mug, statue",
+            "green, potted snake plant",
+            [
+                "house plant on a desk",
+                "plant near a vase",
+                "plant near a mug",
+                "plant near a statue"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a desk near an apple, bottle, chair",
+            "black, plastic laptop",
+            [
+                "laptop on a desk",
+                "laptop near an apple",
+                "laptop near a bottle",
+                "laptop near a chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a desk near a statue, drawer, house plant",
+            "small, sand-colored, ceramic mug",
+            [
+                "mug on a desk",
+                "mug near a statue",
+                "mug near a drawer",
+                "mug near a house plant"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a desk near a remote control, chair",
+            "small, purple, plastic spray bottle",
+            [
+                "spray bottle on a desk",
+                "spray bottle near a remote control",
+                "spray bottle near a chair"
+            ]
+        ],
+        "Television": [
+            "TV on a desk near a remote control, chair",
+            "black and grey TV with a stand",
+            [
+                "TV on a desk",
+                "TV near a remote control",
+                "TV near a chair"
+            ]
+        ],
+        "Vase": [
+            "vase on a desk near a statue, drawer, spray bottle, house plant",
+            "small, yellow, ceramic vase",
+            [
+                "vase on a desk",
+                "vase near a statue",
+                "vase near a drawer",
+                "vase near a spray bottle",
+                "vase near a house plant"
+            ]
+        ]
+    },
+    "FloorPlan_Val2_4": {
+        "AlarmClock": [
+            "alarm clock on a dining table near a cell phone, cd",
+            "small, black alarm clock",
+            [
+                "alarm clock on a dining table",
+                "alarm clock near a cell phone",
+                "alarm clock near a cd"
+            ]
+        ],
+        "Apple": [
+            "apple on a TV stand near a drawer, bowl, shelf, basketball",
+            "small, red apple",
+            [
+                "apple on a TV stand",
+                "apple near a drawer",
+                "apple near a bowl",
+                "apple near a shelf",
+                "apple near a basketball"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a watch, pot, side table, floor lamp",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a watch",
+                "baseball bat near a pot",
+                "baseball bat near a side table",
+                "baseball bat near a floor lamp"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on a shelf in a TV stand near an apple, bowl, chair, dresser",
+            "orange basketball",
+            [
+                "basketball on a shelf in a TV stand",
+                "basketball near an apple",
+                "basketball near a bowl",
+                "basketball near a chair",
+                "basketball near a dresser"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a TV stand near an apple, basketball, chair",
+            "small, bluish-grey, plastic bowl",
+            [
+                "bowl on a TV stand",
+                "bowl near an apple",
+                "bowl near a basketball",
+                "bowl near a chair"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor",
+            "plastic, blue recycling bin",
+            [
+                "garbage can on the floor"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a dresser near a spray bottle, books",
+            "green, potted snake plant",
+            [
+                "house plant on a dresser",
+                "plant near a spray bottle",
+                "plant near a books"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a dining table near a cell phone, statue, cd, chair",
+            "black, plastic laptop",
+            [
+                "laptop on a dining table",
+                "laptop near a cell phone",
+                "laptop near a statue",
+                "laptop near a cd",
+                "laptop near a chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a coffee table near a pencil, pen, pot, bottle, painting",
+            "small, black, ceramic mug",
+            [
+                "mug on a coffee table",
+                "mug near a pencil",
+                "mug near a pen",
+                "mug near a pot",
+                "mug near a bottle",
+                "mug near a painting"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a dresser near a house plant, books",
+            "small, pink, plastic spray bottle",
+            [
+                "spray bottle on a dresser",
+                "spray bottle near a house plant",
+                "spray bottle near a books"
+            ]
+        ],
+        "Television": [
+            "TV on the wall",
+            "black and grey, mounted TV",
+            [
+                "TV on the wall"
+            ]
+        ],
+        "Vase": [
+            "vase on a dresser near a candle, drawer",
+            "small, golden, metallic vase",
+            [
+                "vase on a dresser",
+                "vase near a candle",
+                "vase near a drawer"
+            ]
+        ]
+    },
+    "FloorPlan_Val2_5": {
+        "AlarmClock": [
+            "alarm clock on a side table near a side table",
+            "beige and black alarm clock",
+            [
+                "alarm clock on a side table",
+                "alarm clock near a side table"
+            ]
+        ],
+        "Apple": [
+            "apple on a coffee table near a laptop, pot, bowl",
+            "small, green apple",
+            [
+                "apple on a coffee table",
+                "apple near a laptop",
+                "apple near a pot",
+                "apple near a bowl"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a side table",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a side table"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near arm chairs",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near arm chairs"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a coffee table near a coffee table, laptop, apple, pot",
+            "small, light-brown, plastic bowl",
+            [
+                "bowl on a coffee table",
+                "bowl near a coffee table",
+                "bowl near a laptop",
+                "bowl near an apple",
+                "bowl near a pot"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a house plant, coffee table",
+            "black, plastic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a house plant",
+                "garbage can near a coffee table"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a coffee table near a garbage can, spray bottle, books",
+            "green, potted snake plant",
+            [
+                "house plant on a coffee table",
+                "plant near a garbage can",
+                "plant near a spray bottle",
+                "plant near a books"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a coffee table near an apple, pot, bowl, arm chair",
+            "black, metallic laptop",
+            [
+                "laptop on a coffee table",
+                "laptop near an apple",
+                "laptop near a pot",
+                "laptop near a bowl",
+                "laptop near an arm chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a coffee table near a cell phone, books, painting",
+            "small, white, ceramic mug",
+            [
+                "mug on a coffee table",
+                "mug near a cell phone",
+                "mug near a books",
+                "mug near a painting"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a coffee table near a cell phone, house plant, books, painting",
+            "small, green, plastic spray bottle",
+            [
+                "spray bottle on a coffee table",
+                "spray bottle near a cell phone",
+                "spray bottle near a house plant",
+                "spray bottle near a books",
+                "spray bottle near a painting"
+            ]
+        ],
+        "Television": [
+            "TV on a TV stand near a remote control, chair",
+            "black and grey TV with a stand",
+            [
+                "TV on a TV stand",
+                "TV near a remote control",
+                "TV near a chair"
+            ]
+        ],
+        "Vase": [
+            "vase on a shelving unit near a newspaper, book, statue",
+            "small, white, ceramic vase",
+            [
+                "vase on a shelving unit",
+                "vase near a newspaper",
+                "vase near a book",
+                "vase near a statue"
+            ]
+        ]
+    },
+    "FloorPlan_Val3_1": {
+        "AlarmClock": [
+            "alarm clock on a side table near a mug, pillow, bed",
+            "small, grey and black alarm clock",
+            [
+                "alarm clock on a side table",
+                "alarm clock near a mug",
+                "alarm clock near a pillow",
+                "alarm clock near a bed"
+            ]
+        ],
+        "Apple": [
+            "apple on a dining table near a laptop, bowl, bottle",
+            "small, red apple",
+            [
+                "apple on a dining table",
+                "apple near a laptop",
+                "apple near a bowl",
+                "apple near a bottle"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a book, basketball, statue, shelving unit, TV",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a book",
+                "baseball bat near a basketball",
+                "baseball bat near a statue",
+                "baseball bat near a shelving unit",
+                "baseball bat near a TV"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near a shelving unit, side table, baseball bat, book",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near a shelving unit",
+                "basketball near a side table",
+                "basketball near a baseball bat",
+                "basketball near a book"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a dining table near a desk lamp, laptop, apple, chair",
+            "small, white, ceramic bowl",
+            [
+                "bowl on a dining table",
+                "bowl near a desk lamp",
+                "bowl near a laptop",
+                "bowl near an apple",
+                "bowl near a chair"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near an arm chair",
+            "black, plastic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near an arm chair"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a coffee table near a vase, cell phone, dresser, spray bottle",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a coffee table",
+                "plant near a vase",
+                "plant near a cell phone",
+                "plant near a dresser",
+                "plant near a spray bottle"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a dining table near a desk lamp, apple, bowl, bottle, chair",
+            "grey, plastic laptop",
+            [
+                "laptop on a dining table",
+                "laptop near a desk lamp",
+                "laptop near an apple",
+                "laptop near a bowl",
+                "laptop near a bottle",
+                "laptop near a chair"
+            ]
+        ],
+        "Mug": [
+            "mug on a side table near an alarm clock, bed",
+            "small, white, ceramic mug",
+            [
+                "mug on a side table",
+                "mug near an alarm clock",
+                "mug near a bed"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a dresser near a drawer",
+            "small, blue, plastic spray bottle",
+            [
+                "spray bottle on a dresser",
+                "spray bottle near a drawer"
+            ]
+        ],
+        "Television": [
+            "TV on a side table near a remote control",
+            "black and grey TV with a stand",
+            [
+                "TV on a side table",
+                "TV near a remote control"
+            ]
+        ],
+        "Vase": [
+            "vase on a coffee table near a cell phone, house plant, painting",
+            "small, white, ceramic vase",
+            [
+                "vase on a coffee table",
+                "vase near a cell phone",
+                "vase near a house plant",
+                "vase near a painting"
+            ]
+        ]
+    },
+    "FloorPlan_Val3_2": {
+        "AlarmClock": [
+            "alarm clock on a TV stand near a cup, desk lamp, pillow, watch, shelf, bottle",
+            "small, copper and black, metallic alarm clock",
+            [
+                "alarm clock on a TV stand",
+                "alarm clock near a cup",
+                "alarm clock near a desk lamp",
+                "alarm clock near a pillow",
+                "alarm clock near a watch",
+                "alarm clock near a shelf",
+                "alarm clock near a bottle"
+            ]
+        ],
+        "Apple": [
+            "apple on a side table near a cup, book, painting",
+            "small, green apple",
+            [
+                "apple on a side table",
+                "apple near a cup",
+                "apple near a book",
+                "apple near a painting"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on a TV stand near a desk lamp, watch, statue, shelf",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on a TV stand",
+                "baseball bat near a desk lamp",
+                "baseball bat near a watch",
+                "baseball bat near a statue",
+                "baseball bat near a shelf"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on a shelf near a vase, box, spray bottle",
+            "orange basketball",
+            [
+                "basketball on a shelf",
+                "basketball near a vase",
+                "basketball near a box",
+                "basketball near a spray bottle"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a side table near a side table, remote control, house plant, cell phone, sofa",
+            "small, dark, glass bowl",
+            [
+                "bowl on a side table",
+                "bowl near a side table",
+                "bowl near a remote control",
+                "bowl near a house plant",
+                "bowl near a cell phone",
+                "bowl near a sofa"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a desk, TV",
+            "white, plastic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a desk",
+                "garbage can near a TV"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a side table near a cell phone, bowl, sofa",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a side table",
+                "plant near a cell phone",
+                "plant near a bowl",
+                "plant near a sofa"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a bed",
+            "grey, plastic laptop",
+            [
+                "laptop on a bed"
+            ]
+        ],
+        "Mug": [
+            "mug on a desk near a TV, drawer",
+            "small, sand-colored, ceramic mug",
+            [
+                "mug on a desk",
+                "mug near a TV",
+                "mug near a drawer"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a shelf in a side table, near a basketball",
+            "small, green, plastic spray bottle",
+            [
+                "spray bottle on a shelf in a side table,",
+                "spray bottle near a basketball"
+            ]
+        ],
+        "Television": [
+            "TV on a desk near a mug, garbage can",
+            "black and grey TV with a stand",
+            [
+                "TV on a desk",
+                "TV near a mug",
+                "TV near a garbage can"
+            ]
+        ],
+        "Vase": [
+            "vase on a side table near a pencil, painting, pen, box, basketball",
+            "small, white, ceramic vase",
+            [
+                "vase on a side table",
+                "vase near a pencil",
+                "vase near a painting",
+                "vase near a pen",
+                "vase near a box",
+                "vase near a basketball"
+            ]
+        ]
+    },
+    "FloorPlan_Val3_3": {
+        "AlarmClock": [
+            "alarm clock on a coffee table near a mug, book, bottle, arm chair",
+            "small, rust-colored and black alarm clock",
+            [
+                "alarm clock on a coffee table",
+                "alarm clock near a mug",
+                "alarm clock near a book",
+                "alarm clock near a bottle",
+                "alarm clock near an arm chair"
+            ]
+        ],
+        "Apple": [
+            "apple on a desk near a laptop, pencil, pen, chair, baseball bat",
+            "small, red apple",
+            [
+                "apple on a desk",
+                "apple near a laptop",
+                "apple near a pencil",
+                "apple near a pen",
+                "apple near a chair",
+                "apple near a baseball bat"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near an apple, desk, chair, laptop",
+            "silver, metallic baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near an apple",
+                "baseball bat near a desk",
+                "baseball bat near a chair",
+                "baseball bat near a laptop"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on an arm chair near a remote control, pillow, bottle",
+            "orange basketball",
+            [
+                "basketball on an arm chair",
+                "basketball near a remote control",
+                "basketball near a pillow",
+                "basketball near a bottle"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a dining table near a cup, pepper shaker, house plant, salt shaker, chairs",
+            "small, bluish-grey, plastic bowl",
+            [
+                "bowl on a dining table",
+                "bowl near a cup",
+                "bowl near a pepper shaker",
+                "bowl near a house plant",
+                "bowl near a salt shaker",
+                "bowl near a chairs"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a dresser, TV, newspaper",
+            "green, plastic recycling bin",
+            [
+                "garbage can on the floor",
+                "garbage can near a dresser",
+                "garbage can near a TV",
+                "garbage can near a newspaper"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a dining table near a cup, butter knife, bowl, salt shaker, pepper shaker, plate, chairs",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a dining table",
+                "plant near a cup",
+                "plant near a butter knife",
+                "plant near a bowl",
+                "plant near a salt shaker",
+                "plant near a pepper shaker",
+                "plant near a plate",
+                "plant near a chairs"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a desk near a pencil, desk lamp, pen, apple, chair, baseball bat",
+            "black, plastic laptop",
+            [
+                "laptop on a desk",
+                "laptop near a pencil",
+                "laptop near a desk lamp",
+                "laptop near a pen",
+                "laptop near an apple",
+                "laptop near a chair",
+                "laptop near a baseball bat"
+            ]
+        ],
+        "Mug": [
+            "mug on a coffee table near an alarm clock, books, bottle, arm chair",
+            "small, black, ceramic mug",
+            [
+                "mug on a coffee table",
+                "mug near an alarm clock",
+                "mug near a books",
+                "mug near a bottle",
+                "mug near an arm chair"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on the floor near a dresser, floor lamp",
+            "small, black, plastic spray bottle",
+            [
+                "spray bottle on the floor",
+                "spray bottle near a dresser",
+                "spray bottle near a floor lamp"
+            ]
+        ],
+        "Television": [
+            "TV on the wall over a dresser near a vase, drawer, newspaper, floor lamp",
+            "black and grey, mounted TV",
+            [
+                "TV on the wall over a dresser",
+                "TV near a vase",
+                "TV near a drawer",
+                "TV near a newspaper",
+                "TV near a floor lamp"
+            ]
+        ],
+        "Vase": [
+            "vase on a dresser near a TV, newspaper, floor lamp",
+            "small, white, ceramic vase",
+            [
+                "vase on a dresser",
+                "vase near a TV",
+                "vase near a newspaper",
+                "vase near a floor lamp"
+            ]
+        ]
+    },
+    "FloorPlan_Val3_4": {
+        "AlarmClock": [
+            "alarm clock on a shelving unit near a bowl, apple, mug, basketball, bottle, bed",
+            "small, gold and rust-colored alarm clock",
+            [
+                "alarm clock on a shelving unit",
+                "alarm clock near a bowl",
+                "alarm clock near an apple",
+                "alarm clock near a mug",
+                "alarm clock near a basketball",
+                "alarm clock near a bottle",
+                "alarm clock near a bed"
+            ]
+        ],
+        "Apple": [
+            "apple on a shelving unit near a bowl, alarm clock, mug, bottle, garbage can",
+            "small, red apple",
+            [
+                "apple on a shelving unit",
+                "apple near a bowl",
+                "apple near an alarm clock",
+                "apple near a mug",
+                "apple near a bottle",
+                "apple near a garbage can"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a floor lamp",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a floor lamp"
+            ]
+        ],
+        "BasketBall": [
+            "basketball on the floor near a shelving unit, alarm clock, bed",
+            "orange basketball",
+            [
+                "basketball on the floor",
+                "basketball near a shelving unit",
+                "basketball near an alarm clock",
+                "basketball near a bed"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a shelving unit near a garbage can, alarm clock, apple, spray bottle, mug",
+            "small, sand-colored, plastic bowl",
+            [
+                "bowl on a shelving unit",
+                "bowl near a garbage can",
+                "bowl near an alarm clock",
+                "bowl near an apple",
+                "bowl near a spray bottle",
+                "bowl near a mug"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a spray bottle, bowl, shelving unit, apple",
+            "white, metallic garbage can",
+            [
+                "garbage can on the floor",
+                "garbage can near a spray bottle",
+                "garbage can near a bowl",
+                "garbage can near a shelving unit",
+                "garbage can near an apple"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a coffee table near a vase, remote control",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a coffee table",
+                "plant near a vase",
+                "plant near a remote control"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a sofa near a floor lamp",
+            "silver, metallic laptop",
+            [
+                "laptop on a sofa",
+                "laptop near a floor lamp"
+            ]
+        ],
+        "Mug": [
+            "mug on a shelving unit near a bowl, apple, alarm clock, mug, bottle, garbage can",
+            "small, white, ceramic mug",
+            [
+                "mug on a shelving unit",
+                "mug near a bowl",
+                "mug near an apple",
+                "mug near an alarm clock",
+                "mug near a mug",
+                "mug near a bottle",
+                "mug near a garbage can"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on the floor near a garbage can, shelving unit, bowl",
+            "small, purple, plastic spray bottle",
+            [
+                "spray bottle on the floor",
+                "spray bottle near a garbage can",
+                "spray bottle near a shelving unit",
+                "spray bottle near a bowl"
+            ]
+        ],
+        "Television": [
+            "TV on a TV stand near a floor lamp, baseball bat",
+            "black and grey TV with a stand",
+            [
+                "TV on a TV stand",
+                "TV near a floor lamp",
+                "TV near a baseball bat"
+            ]
+        ],
+        "Vase": [
+            "vase on a coffee table near a remote control, house plant",
+            "small, red, ceramic vase",
+            [
+                "vase on a coffee table",
+                "vase near a remote control",
+                "vase near a house plant"
+            ]
+        ]
+    },
+    "FloorPlan_Val3_5": {
+        "AlarmClock": [
+            "alarm clock in a shelving unit near a spray bottle, house plant, basketball",
+            "beige and black alarm clock",
+            [
+                "alarm clock in a shelving unit",
+                "alarm clock near a spray bottle",
+                "alarm clock near a house plant",
+                "alarm clock near a basketball"
+            ]
+        ],
+        "Apple": [
+            "apple on a dining table near a cup, laptop, bowl, pot, mug, plate, statue, bottle, chairs",
+            "small, red apple",
+            [
+                "apple on a dining table",
+                "apple near a cup",
+                "apple near a laptop",
+                "apple near a bowl",
+                "apple near a pot",
+                "apple near a mug",
+                "apple near a plate",
+                "apple near a statue",
+                "apple near a bottle",
+                "apple near a chairs"
+            ]
+        ],
+        "BaseballBat": [
+            "baseball bat on the floor near a desk, chair, books",
+            "brown, wooden baseball bat",
+            [
+                "baseball bat on the floor",
+                "baseball bat near a desk",
+                "baseball bat near a chair",
+                "baseball bat near a books"
+            ]
+        ],
+        "BasketBall": [
+            "basketball in a shelving unit near an alarm clock",
+            "orange basketball",
+            [
+                "basketball in a shelving unit",
+                "basketball near an alarm clock"
+            ]
+        ],
+        "Bowl": [
+            "bowl on a dining table near a cup, pencil, apple, mug, plate, statue, bottle, chairs",
+            "small, clear, glass bowl",
+            [
+                "bowl on a dining table",
+                "bowl near a cup",
+                "bowl near a pencil",
+                "bowl near an apple",
+                "bowl near a mug",
+                "bowl near a plate",
+                "bowl near a statue",
+                "bowl near a bottle",
+                "bowl near a chairs"
+            ]
+        ],
+        "GarbageCan": [
+            "garbage can on the floor near a box",
+            "blue, plastic recycling bin",
+            [
+                "garbage can on the floor",
+                "garbage can near a box"
+            ]
+        ],
+        "HousePlant": [
+            "house plant on a shelving unit near a spray bottle, alarm clock",
+            "green, potted queen of hearts plant",
+            [
+                "house plant on a shelving unit",
+                "plant near a spray bottle",
+                "plant near an alarm clock"
+            ]
+        ],
+        "Laptop": [
+            "laptop on a dining table near a cup, apple, pot, plate, statue, chairs",
+            "black, metallic laptop",
+            [
+                "laptop on a dining table",
+                "laptop near a cup",
+                "laptop near an apple",
+                "laptop near a pot",
+                "laptop near a plate",
+                "laptop near a statue",
+                "laptop near a chairs"
+            ]
+        ],
+        "Mug": [
+            "mug on a dining table near a cup, bowl, pencil, chair, apple, statue, bottle, chairs",
+            "small, sand-colored, ceramic mug",
+            [
+                "mug on a dining table",
+                "mug near a cup",
+                "mug near a bowl",
+                "mug near a pencil",
+                "mug near a chair",
+                "mug near an apple",
+                "mug near a statue",
+                "mug near a bottle",
+                "mug near a chairs"
+            ]
+        ],
+        "SprayBottle": [
+            "spray bottle on a shelving unit near a house plant, alarm clock",
+            "small, pink, plastic spray bottle",
+            [
+                "spray bottle on a shelving unit",
+                "spray bottle near a house plant",
+                "spray bottle near an alarm clock"
+            ]
+        ],
+        "Television": [
+            "TV on a TV stand near a plate, pencil, newspaper",
+            "black and grey TV with a stand",
+            [
+                "TV on a TV stand",
+                "TV near a plate",
+                "TV near a pencil",
+                "TV near a newspaper"
+            ]
+        ],
+        "Vase": [
+            "vase on a side table near a remote control, arm chair, sofa",
+            "small, blue, ceramic vase",
+            [
+                "vase on a side table",
+                "vase near a remote control",
+                "vase near an arm chair",
+                "vase near a sofa"
+            ]
+        ]
+    }
+}

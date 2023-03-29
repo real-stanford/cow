@@ -1,0 +1,6 @@
+{
+    "owl-b32-openai": 0.2,
+    "grad-b32-openai": 0.375,
+    "patch-b32-openai": 0.91,
+    "mdetr-enb3-standard": 0.95
+}

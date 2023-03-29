@@ -1,0 +1,61 @@
+{
+    "FloorPlan_Val1_1": {
+        "Bed|+08.72|00.00|-02.51": "under the bed with two pillows",
+        "Bed|+08.76|+00.00|-03.74": "under the bed with one pillow"
+    },
+    "FloorPlan_Val1_2": {
+        "Sofa|+09.33|+00.00|-04.05": "under the brown sofa",
+        "Sofa|+02.21|00.00|-02.44": "under the blue sofa"
+    },
+    "FloorPlan_Val1_3": {
+       "Bed|+05.63|00.00|-02.64": "under the bed with no pillow",
+       "Bed|+08.64|+00.00|-03.86": "under the bed with a single pillow",
+       "Sofa|+01.84|+00.00|-03.48": "under the sofa"
+    },
+    "FloorPlan_Val1_4": {
+        "Dresser|+03.65|00.00|-01.64": "in the dresser drawers"
+    },
+    "FloorPlan_Val1_5": {
+        "Bed|+02.03|+00.00|-02.39": "under the bed",
+        "Sofa|+07.63|+00.00|-02.71": "under the brown sofa"
+    },
+    "FloorPlan_Val2_1": {
+        "Sofa|+05.34|+00.00|-03.41": "under the white sofa"
+    },
+    "FloorPlan_Val2_2": {
+        "Bed|+02.63|+00.00|-01.51": "under the day bed"
+    },
+    "FloorPlan_Val2_3": {
+        "Dresser|+04.01|+00.00|-01.53": "in the dresser drawers",
+        "Bed|+02.20|+00.00|-01.62": "under the bed with yellow sheets",
+        "Bed|+05.30|+00.00|-04.42": "under the day bed"
+    },
+    "FloorPlan_Val2_4": {
+        "Sofa|+05.32|+00.00|-04.46": "under the white sofa"
+    },
+    "FloorPlan_Val2_5": {
+        "ShelvingUnit|+06.90|+00.00|-01.23": "in the left shelving unit drawers",
+        "ShelvingUnit|+07.33|+00.00|-01.23": "in the right shelving unit drawers",
+        "Bed|+02.12|00.00|-01.65": "under the bed"
+    },
+    "FloorPlan_Val3_1": {
+        "Bed|+08.78|+00.00|-01.55": "under the bed",
+        "ShelvingUnit|+05.00|+00.00|-01.24": "in the shelving unit drawers"
+    },
+    "FloorPlan_Val3_2": {
+        "Bed|+01.50|+00.00|-01.93": "under the bed",
+        "Sofa|+07.87|+00.00|-01.50": "under the blue sofa"
+    },
+    "FloorPlan_Val3_3": {
+        "Dresser|+02.33|00.00|-04.69": "in the white dresser drawers"
+    },
+    "FloorPlan_Val3_4": {
+        "Sofa|+05.70|+00.01|-02.27": "under the sofa",
+        "SideTable|+08.15|+00.00|-04.68": "in the side table drawers",
+        "Bed|+01.90|+00.00|-02.42": "under the bed"
+    },
+    "FloorPlan_Val3_5": {
+        "CoffeeTable|+09.11|+00.00|-02.77": "inside the coffee table with drawers",
+        "Sofa|+08.38|+00.00|-04.42": "under the brown sofa"
+    }
+}

@@ -1,0 +1,410 @@
+# modified from: https://github.com/allenai/allenact/blob/main/projects/objectnav_baselines/experiments/objectnav_thor_base.py
+
+import glob
+import os
+import platform
+from abc import ABC
+from math import ceil
+from typing import Any, Dict, List, Optional, Sequence, Tuple, cast
+
+import gym
+import numpy as np
+import torch
+from allenact.base_abstractions.experiment_config import MachineParams
+from allenact.base_abstractions.preprocessor import SensorPreprocessorGraph
+from allenact.base_abstractions.sensor import ExpertActionSensor, SensorSuite
+from allenact.base_abstractions.task import TaskSampler
+from allenact.utils.experiment_utils import evenly_distribute_count_into_bins
+from allenact.utils.system import get_logger
+from allenact_plugins.habitat_plugin.habitat_constants import (
+    HABITAT_CONFIGS_DIR, HABITAT_DATASETS_DIR, HABITAT_SCENE_DATASETS_DIR)
+from allenact_plugins.habitat_plugin.habitat_task_samplers import \
+    ObjectNavTaskSampler
+from allenact_plugins.habitat_plugin.habitat_utils import (
+    construct_env_configs, get_habitat_config)
+from allenact_plugins.robothor_plugin.robothor_tasks import ObjectNavTask
+from src.allenact_experiments.shared.base_config import BaseConfig
+from src.allenact_experiments.shared.vision_sensor import \
+    VISION_SENSOR_TO_HABITAT_LABEL
+
+
+class ObjectNavHabitatBaseConfig(BaseConfig, ABC):
+    """The base config for all AI2-THOR ObjectNav experiments."""
+
+    DEFAULT_TRAIN_GPU_IDS = tuple(range(torch.cuda.device_count()))
+    DEFAULT_VALID_GPU_IDS = tuple(range(torch.cuda.device_count()))#(torch.cuda.device_count() - 1,)
+    DEFAULT_TEST_GPU_IDS = tuple(range(torch.cuda.device_count()))#(torch.cuda.device_count() - 1,)
+    NUM_PROCESSES = 40 if torch.cuda.is_available() else 1
+
+    # DISTANCE_TO_GOAL = 1.0
+
+    THOR_IS_HEADLESS: bool = False
+
+    task_data_dir_template = os.path.join(
+        HABITAT_DATASETS_DIR, "objectnav/mp3d/v1/{}/{}.json.gz"
+    )
+    TRAIN_SCENES = task_data_dir_template.format(*(["train"] * 2))
+    VALID_SCENES = task_data_dir_template.format(*(["val"] * 2))
+    TEST_SCENES = task_data_dir_template.format(*(["test"] * 2))
+
+    CONFIG = get_habitat_config(
+        os.path.join(HABITAT_CONFIGS_DIR, "tasks/objectnav_mp3d.yaml")
+    )
+    CONFIG.defrost()
+    CONFIG.NUM_PROCESSES = NUM_PROCESSES
+    CONFIG.SIMULATOR_GPU_IDS = DEFAULT_TRAIN_GPU_IDS
+    CONFIG.DATASET.SCENES_DIR = HABITAT_SCENE_DATASETS_DIR
+    CONFIG.DATASET.DATA_PATH = TRAIN_SCENES
+    # ["RGB_SENSOR", "DEPTH_SENSOR", "SEMANTIC_SENSOR"]
+
+    CONFIG.SIMULATOR.AGENT_0.SENSORS = ["RGB_SENSOR"]
+
+    CONFIG.SIMULATOR.RGB_SENSOR.WIDTH = BaseConfig.CAMERA_WIDTH
+    CONFIG.SIMULATOR.RGB_SENSOR.HEIGHT = BaseConfig.CAMERA_HEIGHT
+    CONFIG.SIMULATOR.RGB_SENSOR.HFOV = BaseConfig.HORIZONTAL_FIELD_OF_VIEW
+
+    CONFIG.SIMULATOR.DEPTH_SENSOR.WIDTH = BaseConfig.CAMERA_WIDTH
+    CONFIG.SIMULATOR.DEPTH_SENSOR.HEIGHT = BaseConfig.CAMERA_HEIGHT
+    CONFIG.SIMULATOR.DEPTH_SENSOR.HFOV = BaseConfig.HORIZONTAL_FIELD_OF_VIEW
+    CONFIG.SIMULATOR.DEPTH_SENSOR['NORMALIZE_DEPTH'] = False
+    CONFIG.SIMULATOR.DEPTH_SENSOR['MAX_DEPTH'] = 20.0
+    CONFIG.SIMULATOR.DEPTH_SENSOR['MIN_DEPTH'] = 0.05
+
+
+    CONFIG.SIMULATOR.SEMANTIC_SENSOR.WIDTH = BaseConfig.CAMERA_WIDTH
+    CONFIG.SIMULATOR.SEMANTIC_SENSOR.HEIGHT = BaseConfig.CAMERA_HEIGHT
+    CONFIG.SIMULATOR.SEMANTIC_SENSOR.HFOV = BaseConfig.HORIZONTAL_FIELD_OF_VIEW
+
+    CONFIG.SIMULATOR.TURN_ANGLE = int(BaseConfig.ROTATION_DEGREES)
+    CONFIG.SIMULATOR.FORWARD_STEP_SIZE = BaseConfig.STEP_SIZE
+    CONFIG.ENVIRONMENT.MAX_EPISODE_STEPS = BaseConfig.MAX_STEPS
+
+    CONFIG.TASK.TYPE = "ObjectNav-v1"
+    CONFIG.TASK.SUCCESS_DISTANCE = 1.0#DISTANCE_TO_GOAL
+    CONFIG.TASK.MEASUREMENTS = ["DISTANCE_TO_GOAL", "SUCCESS", "SPL", "SOFT_SPL"]
+    CONFIG.TASK.SPL.TYPE = "SPL"
+    CONFIG.TASK.SPL.SUCCESS_DISTANCE = 0.1#DISTANCE_TO_GOAL
+    CONFIG.TASK.SUCCESS.SUCCESS_DISTANCE = 0.1#DISTANCE_TO_GOAL
+
+    CONFIG.MODE = "train"
+
+    TRAIN_CONFIGS = construct_env_configs(CONFIG)
+
+    def __init__(
+        self,
+        num_train_processes: Optional[int] = None,
+        num_test_processes: Optional[int] = None,
+        test_on_validation: bool = True,
+        train_gpu_ids: Optional[Sequence[int]] = None,
+        val_gpu_ids: Optional[Sequence[int]] = None,
+        test_gpu_ids: Optional[Sequence[int]] = None,
+        randomize_train_materials: bool = False,
+    ):
+        super().__init__()
+
+        def v_or_default(v, default):
+            return v if v is not None else default
+
+        self.num_train_processes = v_or_default(
+            num_train_processes, self.NUM_PROCESSES
+        )
+        self.num_test_processes = v_or_default(
+            num_test_processes, (10 if torch.cuda.is_available() else 1)
+        )
+        self.test_on_validation = test_on_validation
+        self.train_gpu_ids = v_or_default(
+            train_gpu_ids, self.DEFAULT_TRAIN_GPU_IDS)
+        self.val_gpu_ids = v_or_default(
+            val_gpu_ids, self.DEFAULT_VALID_GPU_IDS)
+        self.test_gpu_ids = v_or_default(
+            test_gpu_ids, self.DEFAULT_TEST_GPU_IDS)
+
+        self.sampler_devices = self.train_gpu_ids
+        self.randomize_train_materials = randomize_train_materials
+
+    def machine_params(self, mode="train", **kwargs):
+        sampler_devices: Sequence[torch.device] = []
+        devices: Sequence[torch.device]
+        if mode == "train":
+            workers_per_device = 1
+            devices = (
+                [torch.device("cpu")]
+                if not torch.cuda.is_available()
+                else cast(Tuple, self.train_gpu_ids) * workers_per_device
+            )
+            nprocesses = evenly_distribute_count_into_bins(
+                self.num_train_processes, max(len(devices), 1)
+            )
+            sampler_devices = self.sampler_devices
+        elif mode == "valid":
+            nprocesses = 1
+            devices = (
+                [torch.device("cpu")]
+                if not torch.cuda.is_available()
+                else self.val_gpu_ids
+            )
+        elif mode == "test":
+            devices = (
+                [torch.device("cpu")]
+                if not torch.cuda.is_available()
+                else self.test_gpu_ids
+            )
+            nprocesses = evenly_distribute_count_into_bins(
+                self.num_test_processes, max(len(devices), 1)
+            )
+        else:
+            raise NotImplementedError(
+                "mode must be 'train', 'valid', or 'test'.")
+
+        sensors = [*self.SENSORS]
+        if mode != "train":
+            sensors = [s for s in sensors if not isinstance(
+                s, ExpertActionSensor)]
+
+        sensor_preprocessor_graph = (
+            SensorPreprocessorGraph(
+                source_observation_spaces=SensorSuite(
+                    sensors).observation_spaces,
+                preprocessors=self.preprocessors(),
+            )
+            if mode == "train"
+            or (
+                (isinstance(nprocesses, int) and nprocesses > 0)
+                or (isinstance(nprocesses, Sequence) and sum(nprocesses) > 0)
+            )
+            else None
+        )
+
+        return MachineParams(
+            nprocesses=nprocesses,
+            devices=devices,
+            sampler_devices=sampler_devices
+            if mode == "train"
+            else devices,  # ignored with > 1 gpu_ids
+            sensor_preprocessor_graph=sensor_preprocessor_graph,
+        )
+
+    @classmethod
+    def make_sampler_fn(cls, **kwargs) -> TaskSampler:
+        return ObjectNavTaskSampler(**kwargs)
+
+    # @staticmethod
+    # def _partition_inds(n: int, num_parts: int):
+    #     return np.round(np.linspace(0, n, num_parts + 1, endpoint=True)).astype(
+    #         np.int32
+    #     )
+
+    # def _get_sampler_args_for_scene_split(
+    #     self,
+    #     scenes_dir: str,
+    #     process_ind: int,
+    #     total_processes: int,
+    #     devices: Optional[List[int]],
+    #     seeds: Optional[List[int]],
+    #     deterministic_cudnn: bool,
+    #     include_expert_sensor: bool = True,
+    #     allow_oversample: bool = False,
+    # ) -> Dict[str, Any]:
+    #     path = os.path.join(scenes_dir, "*.json.gz")
+    #     scenes = [scene.split("/")[-1].split(".")[0]
+    #               for scene in glob.glob(path)]
+    #     if len(scenes) == 0:
+    #         raise RuntimeError(
+    #             (
+    #                 "Could find no scene dataset information in directory {}."
+    #                 " Are you sure you've downloaded them? "
+    #                 " If not, see https://allenact.org/installation/download-datasets/ information"
+    #                 " on how this can be done."
+    #             ).format(scenes_dir)
+    #         )
+
+    #     oversample_warning = (
+    #         f"Warning: oversampling some of the scenes ({scenes}) to feed all processes ({total_processes})."
+    #         " You can avoid this by setting a number of workers divisible by the number of scenes"
+    #     )
+    #     if total_processes > len(scenes):  # oversample some scenes -> bias
+    #         if not allow_oversample:
+    #             raise RuntimeError(
+    #                 f"Cannot have `total_processes > len(scenes)`"
+    #                 f" ({total_processes} > {len(scenes)}) when `allow_oversample` is `False`."
+    #             )
+
+    #         if total_processes % len(scenes) != 0:
+    #             get_logger().warning(oversample_warning)
+    #         scenes = scenes * int(ceil(total_processes / len(scenes)))
+    #         scenes = scenes[: total_processes *
+    #                         (len(scenes) // total_processes)]
+    #     elif len(scenes) % total_processes != 0:
+    #         get_logger().warning(oversample_warning)
+
+    #     inds = self._partition_inds(len(scenes), total_processes)
+
+    #     if not self.THOR_IS_HEADLESS:
+    #         x_display: Optional[str] = None
+    #         if platform.system() == "Linux":
+    #             x_displays = get_open_x_displays(throw_error_if_empty=True)
+
+    #             if len([d for d in devices if d != torch.device("cpu")]) > len(
+    #                 x_displays
+    #             ):
+    #                 get_logger().warning(
+    #                     f"More GPU devices found than X-displays (devices: `{x_displays}`, x_displays: `{x_displays}`)."
+    #                     f" This is not necessarily a bad thing but may mean that you're not using GPU memory as"
+    #                     f" efficiently as possible. Consider following the instructions here:"
+    #                     f" https://allenact.org/installation/installation-framework/#installation-of-ithor-ithor-plugin"
+    #                     f" describing how to start an X-display on every GPU."
+    #                 )
+    #             x_display = x_displays[process_ind % len(x_displays)]
+
+    #         device_dict = dict(x_display=x_display)
+    #     else:
+    #         device_dict = dict(gpu_device=devices[process_ind % len(devices)])
+
+    #     return {
+    #         "scenes": scenes[inds[process_ind]: inds[process_ind + 1]],
+    #         "object_types": self.TARGET_TYPES,
+    #         "max_steps": self.MAX_STEPS,
+    #         "sensors": [
+    #             s
+    #             for s in self.SENSORS
+    #             if (include_expert_sensor or not isinstance(s, ExpertActionSensor))
+    #         ],
+    #         "action_space": gym.spaces.Discrete(
+    #             len(ObjectNavTask.class_action_names())
+    #         ),
+    #         "seed": seeds[process_ind] if seeds is not None else None,
+    #         "deterministic_cudnn": deterministic_cudnn,
+    #         "rewards_config": self.REWARDS_CONFIG,
+    #         "env_args": {**self.env_args(), **device_dict},
+    #     }
+
+    def train_task_sampler_args(
+        self,
+        process_ind: int,
+        total_processes: int,
+        devices: Optional[List[int]] = None,
+        seeds: Optional[List[int]] = None,
+        deterministic_cudnn: bool = False,
+    ) -> Dict[str, Any]:
+        config = self.TRAIN_CONFIGS[process_ind].clone()
+        config.defrost()
+
+        habitat_sensors = []
+        for s in self.SENSORS:
+            for t in VISION_SENSOR_TO_HABITAT_LABEL:
+                if isinstance(s, t):
+                    habitat_sensors.append(VISION_SENSOR_TO_HABITAT_LABEL[t])
+                    break
+
+        # if self.REWARDS_CONFIG["reward_type"] == "supervised":
+        #     habitat_sensors.append("SEMANTIC_SENSOR")
+
+        config.SIMULATOR.AGENT_0.SENSORS = habitat_sensors
+        config.freeze()
+
+        res = {
+            "env_config": config,
+            "max_steps": self.MAX_STEPS,
+            "sensors": self.SENSORS,
+            "action_space": gym.spaces.Discrete(len(ObjectNavTask.class_action_names())),
+            "distance_to_goal": self.DISTANCE_TO_GOAL,  # type:ignore
+            "rewards_config": self.REWARDS_CONFIG,
+            "seed": seeds[process_ind] if seeds is not None else None,
+            "deterministic_cudnn": deterministic_cudnn,
+        }
+        res["loop_dataset"] = True
+        res["allow_flipping"] = True
+        res["randomize_materials_in_training"] = self.randomize_train_materials
+
+        return res
+
+    def valid_task_sampler_args(
+        self,
+        process_ind: int,
+        total_processes: int,
+        devices: Optional[List[int]] = None,
+        seeds: Optional[List[int]] = None,
+        deterministic_cudnn: bool = False,
+    ) -> Dict[str, Any]:
+        config = self.CONFIG.clone()
+        config.defrost()
+        config.DATASET.DATA_PATH = self.VALID_SCENES
+        config.MODE = "validate"
+
+        habitat_sensors = []
+        for s in self.SENSORS:
+            for t in VISION_SENSOR_TO_HABITAT_LABEL:
+                if isinstance(s, t):
+                    habitat_sensors.append(VISION_SENSOR_TO_HABITAT_LABEL[t])
+                    break
+
+        config.SIMULATOR.AGENT_0.SENSORS = habitat_sensors
+        config.freeze()
+
+        res = {
+            "env_config": config,
+            "max_steps": self.MAX_STEPS,
+            "sensors": self.SENSORS,
+            "action_space": gym.spaces.Discrete(len(ObjectNavTask.class_action_names())),
+            "distance_to_goal": self.DISTANCE_TO_GOAL,
+            "rewards_config": self.REWARDS_CONFIG,
+            "seed": seeds[process_ind] if seeds is not None else None,
+            "deterministic_cudnn": deterministic_cudnn,
+        }
+        res["loop_dataset"] = False
+
+        return res
+
+    def test_task_sampler_args(
+        self,
+        process_ind: int,
+        total_processes: int,
+        devices: Optional[List[int]] = None,
+        seeds: Optional[List[int]] = None,
+        deterministic_cudnn: bool = False,
+    ) -> Dict[str, Any]:
+        if self.test_on_validation or self.TEST_SCENES is None:
+            if not self.test_on_validation:
+                get_logger().warning(
+                    "No test dataset dir detected, running test on validation set instead."
+                )
+            else:
+                get_logger().info(
+                    "`test_on_validation` was `True``, running test on validation set."
+                )
+            return self.valid_task_sampler_args(
+                process_ind=process_ind,
+                total_processes=total_processes,
+                devices=devices,
+                seeds=seeds,
+                deterministic_cudnn=deterministic_cudnn,
+            )
+
+        else:
+            config = self.CONFIG.clone()
+            config.defrost()
+            config.DATASET.DATA_PATH = self.TEST_SCENES
+            config.MODE = "test"
+
+            habitat_sensors = []
+            for s in self.SENSORS:
+                for t in VISION_SENSOR_TO_HABITAT_LABEL:
+                    if isinstance(s, t):
+                        habitat_sensors.append(VISION_SENSOR_TO_HABITAT_LABEL[t])
+                        break
+
+            config.SIMULATOR.AGENT_0.SENSORS = habitat_sensors
+            config.freeze()
+
+            res = {
+                "env_config": config,
+                "max_steps": self.MAX_STEPS,
+                "sensors": self.SENSORS,
+                "action_space": gym.spaces.Discrete(len(ObjectNavTask.class_action_names())),
+                "distance_to_goal": self.DISTANCE_TO_GOAL,
+                "rewards_config": self.REWARDS_CONFIG,
+                "seed": seeds[process_ind] if seeds is not None else None,
+                "deterministic_cudnn": deterministic_cudnn,
+            }
+            res["loop_dataset"] = False
+            return res

@@ -1,0 +1,14 @@
+initialize:
+    rotateStepDegrees: 30
+    visibilityDistance: 1.0
+    gridSize: 0.25
+    agentType: stochastic
+    continuousMode: True
+    snapToGrid: False
+    agentMode: locobot
+    fieldOfView: 90
+
+thor_build_id: 7676ca15870d6c9795be1ff1e7c12f65dd52474f
+width: 672
+height: 672
+max_steps: 250

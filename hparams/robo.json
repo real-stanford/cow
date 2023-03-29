@@ -1,0 +1,20 @@
+{
+    "grad-b32-openai": 0.625,
+    "lang-b32-openai": 0.25,
+    "patch-b16-openai": 0.75,
+    "patch-b32-openai": 0.875,
+    "grad-b16-openai": 0.375,
+    "lang-b16-openai": 0.125,
+    "owl-b32-openai": 0.125,
+    "owl-b16-openai": 0.125,
+    "mdetrseg-enb3-openai": 0.95,
+    "grad-b32-photo": 0.625,
+    "lang-b32-photo": 0.25,
+    "patch-b16-photo": 0.75,
+    "patch-b32-photo": 0.875,
+    "grad-b16-photo": 0.375,
+    "lang-b16-photo": 0.125,
+    "owl-b32-photo": 0.125,
+    "owl-b16-photo": 0.125,
+    "mdetrseg-enb3-photo": 0.95
+}
