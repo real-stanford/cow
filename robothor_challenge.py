@@ -429,13 +429,14 @@ class RobothorChallenge:
             send_queue.put(e)
 
         processes = []
+        num_devices = torch.cuda.device_count()
         for worker_ind in range(nprocesses):
             class_remap = None
             if self.class_remap is not None:
                 class_remap = deepcopy(self.class_remap)
             thread_controller_kwargs = deepcopy(self.controller_kwargs)
-            thread_controller_kwargs['gpu_device'] = worker_ind % 8
-            thread_controller_kwargs['x_display'] = f':0.{worker_ind % 8}'
+            thread_controller_kwargs['gpu_device'] = worker_ind % num_devices
+            thread_controller_kwargs['x_display'] = f':0.{worker_ind % num_devices}'
 
             p = mp.Process(
                 target=self.inference_worker,
@@ -448,7 +449,7 @@ class RobothorChallenge:
                     controller_kwargs=thread_controller_kwargs,
                     max_steps=self.config["max_steps"],
                     test=test,
-                    device=get_device(worker_ind % 8),
+                    device=get_device(worker_ind % num_devices),
                     class_remap=class_remap,
                     experiment_name=self.experiment_name,
                     no_grad=self.no_grad,
