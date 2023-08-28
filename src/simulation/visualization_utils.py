@@ -91,9 +91,9 @@ class ThorPositionTo2DFrameTranslator(object):
         self.lower_left = np.array((cam_position[0], cam_position[2])) - orth_size
         self.span = 2 * orth_size
 
-        print(self.frame_shape)
-        print(self.lower_left)
-        print(self.span)
+        # print(self.frame_shape)
+        # print(self.lower_left)
+        # print(self.span)
 
     def __call__(self, position):
         if len(position) == 3:
@@ -121,8 +121,8 @@ def get_agent_map_data(env):
     env.step({"action": "ToggleMapView", "agentId": 0})
     cam_position = env.last_event.metadata["cameraPosition"]
     cam_orth_size = env.last_event.metadata["cameraOrthSize"]
-    print(cam_position)
-    print(cam_orth_size)
+    # print(cam_position)
+    # print(cam_orth_size)
     pos_translator = ThorPositionTo2DFrameTranslator(
         env.last_event.events[0].frame.shape,
         position_to_tuple(cam_position),
@@ -227,7 +227,7 @@ def visualize_agent_path(
     only_show_last_visibility_cone=False,
     position_mark_colors: Optional[List[Optional[str]]] = None,
     opacity: float = 1.0,
-    max_colors: int = None
+    max_colors: int = None,
 ):
     import colour as col
 
