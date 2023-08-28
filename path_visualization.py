@@ -18,7 +18,6 @@ def main(args):
     if not os.path.exists(args.out_dir):
         os.mkdir(args.out_dir)
 
-    # success whiteboard
     controller = Controller(
         local_executable_path=args.thor_build,
         rotateStepDegrees=30,

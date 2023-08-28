@@ -136,7 +136,7 @@ To visualize both an egocentric trajectory view and a top-down path as in the te
 python path_visualization.py --out-dir viz/ --thor-floor FloorPlan_Val3_5 --result-json media/media_data/FloorPlan_Val3_5_GingerbreadHouse_1.json --thor-build pasture_builds/thor_build_longtail/longtail.x86_64
 ```
 
-The script outputs 1) egocentric pngs for each view, 2) an mp4 for the egocentric feed, 3) top-down pngs for each pose, 4) an mp4 for the top-down feed.
+The script outputs 1) egocentric pngs for each view, 2) an mp4 for the egocentric feed, 3) top-down pngs for each pose, 4) an mp4 for the top-down feed. Video creation utilizes `ffmpeg` by making `os.system(...)` calls.
 
 Note: flag arguments should be swapped accordinly for the floor plan and trajectory you wish to visualize. This script provides functionality to visualize RoboTHOR or Pasture evaluations.
 
