@@ -129,6 +129,19 @@ python habitat_mp3d_runner.py -a src.models.agent_fbe_owl -n 8 --arch B32 --cent
 
 If the script is stopped, it will resume where it left off. If you want to re-evaluate from scratch, remove the results subfolder associated with the agent being evaluated in `results/`.
 
+# Visualization on Pasture
+To visualize both an egocentric trajectory view and a top-down path as in the teaser gif above, run:
+
+```
+python path_visualization.py --out-dir viz/ --thor-floor FloorPlan_Val3_5 --result-json media/media_data/FloorPlan_Val3_5_GingerbreadHouse_1.json --thor-build pasture_builds/thor_build_longtail/longtail.x86_64
+```
+
+The script outputs 1) egocentric pngs for each view, 2) an mp4 for the egocentric feed, 3) top-down pngs for each pose, 4) an mp4 for the top-down feed.
+
+Note: flag arguments should be swapped accordinly for the floor plan and trajectory you wish to visualize. This script provides functionality to visualize RoboTHOR or Pasture evaluations.
+
+Script based on code sourced from [here](https://github.com/allenai/cordial-sync/issues/5).
+
 # Helpful Pointers
 
 Evaluation is often long running. Each time an evaluation episode completes, a `json` with information about the trajectory is stored in the `results/` folder. For example, for the default agent on the Pasture uncommon object split: `results/longtail_longtail_fbe_owl-b32-openai-center/*.json`. This allows for printing the completed evaluations, e.g.,
