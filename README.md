@@ -36,7 +36,7 @@ If you have any questions, please contact [Samir](https://sagadre.github.io) at 
 
 Create the conda environment:
 ```sh
-conda env create environment.yml
+conda env create -f environment.yml
 ```
 Activate the environment:
 ```sh
